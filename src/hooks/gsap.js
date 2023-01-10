@@ -34,3 +34,38 @@ export const useLineForward=(arr)=>{
             )
     })
 }
+
+
+
+
+export const useTextUpward=(arr)=>{
+    useEffect(()=>{
+        const el=arr.map(item=>item.current)
+        gsap.fromTo(el,{
+           y:500
+        },{
+            y:0,
+            duration:1,
+            delay:1,
+            ease:"power4.out",
+            stagger:0.2
+        }
+            )
+    })
+}
+
+export const useBoxScalling=(arr)=>{
+    useEffect(()=>{
+        const el=arr.map(item=>item.current)
+        gsap.fromTo(el,{
+          scale:0
+        },{
+            scale:1,
+            duration:1,
+            delay:2,
+            ease:"power4.out",
+            stagger:0.2
+        }
+            )
+    })
+}
